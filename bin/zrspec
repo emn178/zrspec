@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+args = ARGV.join(" ")
+cmd = File.exist?(".zeus.sock") ? "zeus rspec" : "rspec"
+exec "#{cmd} #{args}"
